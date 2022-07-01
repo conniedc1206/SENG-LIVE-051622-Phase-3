@@ -1,6 +1,7 @@
 -- Create dogs
 INSERT INTO dogs(name, birthdate, breed, image_url) 
 VALUES ('Olivia', '2018-03-31 00:00:00', 'Terrier', 'https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229064/zx6CPsp_d_utkmww.webp');
+
 INSERT INTO dogs(name, birthdate, breed, image_url) 
 VALUES ('Molly', '2019-06-21 00:00:00', 'Terrier / Chihuahua', 'https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229038/EEE90-E50-25-F0-4-DF0-98-B2-0-E0-B6-F9-BAA89_menwgg.jpg');
 INSERT INTO dogs(name, birthdate, breed, image_url) 
@@ -41,9 +42,9 @@ VALUES ('Snoopy', '1990-01-01 00:00:00', 'Snooop', 'https://res.cloudinary.com/d
 
 -- Create Walks
 
-INSERT INTO walks(time) VALUES ('2022-06-20 18:05:00');
-INSERT INTO walks(time) VALUES ('2022-06-21 11:25:00');
-INSERT INTO walks(time) VALUES ('2022-06-22 08:55:00');
+INSERT INTO walks(time, dog_id) VALUES ('2022-06-20 18:05:00', 3);
+INSERT INTO walks(time, dog_id) VALUES ('2022-06-21 11:25:00', 3);
+INSERT INTO walks(time, dog_id) VALUES ('2022-06-22 08:55:00', 19);
 
 -- Create DogWalks
 
@@ -53,7 +54,7 @@ INSERT INTO dog_walks(dog_id, walk_id) VALUES(2,1);
 INSERT INTO dog_walks(dog_id, walk_id) VALUES(4,1);
 INSERT INTO dog_walks(dog_id, walk_id) VALUES(4,2);
 
--- Create Feedings
+-- -- Create Feedings
 
 INSERT INTO feedings(time, food, dog_id) 
 VALUES('2022-06-22 11:00:00', 'Bacon', 1);
